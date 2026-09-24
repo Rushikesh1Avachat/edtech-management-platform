@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1790134771179,
+      "tag": "0000_giant_sentry",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790144788132,
+      "tag": "0001_gifted_thing",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790178378649,
+      "tag": "0002_clever_payback",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790224260413,
+      "tag": "0003_flaky_kate_bishop",
+      "breakpoints": true
+    }
+  ]
+}
