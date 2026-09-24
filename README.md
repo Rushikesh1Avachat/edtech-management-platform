@@ -38,6 +38,24 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 `DATABASE_URL` and `GEMINI_API_KEY` can be omitted for the local fallback/demo experience. Stripe requires both Stripe secrets to complete paid enrollment.
 
+### Vercel / Production environment
+
+When deploying to Vercel, set the following environment variables in your Vercel project settings (Dashboard → Settings → Environment Variables):
+
+ - `NEXT_PUBLIC_APP_URL` — the canonical app URL (e.g., `https://edtech-management-platform-8bp99i9i0.vercel.app`) — recommended.
+ - `STRIPE_SECRET_KEY` — your Stripe secret key (starts with `sk_`).
+ - `STRIPE_WEBHOOK_SECRET` — the webhook signing secret (starts with `whsec_`).
+ - `DATABASE_URL` — production Postgres connection string.
+ - `JWT_SECRET` — a long, random secret for signing JWTs.
+
+Vercel also provides the `VERCEL_URL` runtime variable automatically; the app will use it when `NEXT_PUBLIC_APP_URL` is not set.
+
+If you want the Stripe checkout to redirect back to your deployed site, make sure `NEXT_PUBLIC_APP_URL` matches the production domain. The app also defaults to:
+
+`https://edtech-management-platform-8bp99i9i0.vercel.app`
+
+if `NODE_ENV === 'production'` and no other URL vars are set.
+
 ## Demo accounts
 
 All demo accounts use `password123`:
